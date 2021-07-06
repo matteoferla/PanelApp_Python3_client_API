@@ -2,7 +2,6 @@ from .basic import PanelAppQueryBasic
 from .parsed import PanelAppQueryParsed
 from .pandas import PanelAppQueryPandas
 
-import pandas as pd
 import io
 import requests
 

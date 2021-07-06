@@ -11,6 +11,12 @@ That or I have misunderstood what is going on!
 Namely in a returned Panel object (from a panel request) the keys `strs`, `genes`, `regions` are returned,
 which are arrays of objects that follow the `Str`, `Gene` and `Region` definitions.
 
+## Install
+
+```shell script
+pip install PanelApp-client-API
+```
+
 ## Basics of the API
 There are two forms of successful (200) responses.
 For a single entry response, the object returned is a `Panel`, `Gene` etc. while for a list of entries, 

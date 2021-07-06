@@ -9,7 +9,8 @@ __version__ = "0.1"
 __citation__ = "NA"
 
 # ---------- imports  --------------------------------------------------------------------------------------------------
-# remember it's `python setup.py sdist` and `python -m twine upload dist/rdkit_to_params-1.0.5.tar.gz`
+# remember it's `python setup.py sdist` and
+# `python -m twine upload dist/python -m twine upload dist/PanelApp_client_API-0.1.tar.gz`
 
 from setuptools import setup, find_packages
 import os
