@@ -26,9 +26,10 @@ where the parameter `page` controls which subset and is in the URL in `previous`
 In [panel_app_query/basic.py](panel_app_query/basic.py) is a barebone retriever that returns a dict or a list of dicts.
 
 ```python
-from panel_app_query import PanelAppQueryBasic
+from panel_app_query import PanelAppQueryBasic  
 
 pa = PanelAppQueryBasic()
+# for PanelAppQuery its get_raw_data or get_data(.., formatted=False)
 panels = pa.get_data('/panels/')
 panel = pa.get_data('/panels/234/')
 genes = pa.get_data('/genes/')
@@ -191,3 +192,15 @@ print(subset[['entity_name', 'panel_name', 'panel_id']].sort_values('entity_name
 | 30178 | EYA1          | Severe Paediatric Disorders                          |        921 |
 | 10274 | EYA1          | Unexplained kidney failure in young people           |        156 |
 | ....  | ....          |    ....  | ....          |      
+
+## Panel names
+
+There is a further complication in that the panel ids are not used in GEL labkey panels_applied table.
+The names of the panels change for various reasons, yet in panels_applied they are not.
+For example in panel id 134, `Arrhythmogenic cardiomyopathy`, the former names are:
+
+* Arrhythmogenic Right Ventricular Cardiomyopathy
+* Arrythmogenic cardiomyopathy
+* R133
+
+The former names appear in the webpage of activity, but in the API they appear in `relevant_disorders`.
