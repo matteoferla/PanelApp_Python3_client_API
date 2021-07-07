@@ -204,3 +204,4 @@ For example in panel id 134, `Arrhythmogenic cardiomyopathy`, the former names a
 * R133
 
 The former names appear in the webpage of activity, but in the API they appear in `relevant_disorders`.
+See [panel_synonyms.json](panel_synonyms.json) for a name to current name map as of July 2021.
